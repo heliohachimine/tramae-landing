@@ -290,81 +290,14 @@ img {
 .logo {
   display: flex;
   align-items: center;
-  gap: 12px;
+  flex-shrink: 0;
 }
 
-.logo__name {
-  color: var(--color-background);
+.logo img {
+  display: block;
 
-  font-family: var(--font-heading);
-  font-size: 20px;
-  font-weight: 800;
-
-  letter-spacing: 0.08em;
-}
-
-.logo__symbol {
-  position: relative;
-
-  width: 26px;
-  height: 26px;
-}
-
-.logo__symbol span {
-  position: absolute;
-
-  width: 6px;
-  height: 6px;
-
-  border: 2px solid var(--color-accent);
-
-  border-radius: 50%;
-}
-
-.logo__symbol span:nth-child(1) {
-  top: 2px;
-  left: 10px;
-}
-
-.logo__symbol span:nth-child(2) {
-  bottom: 2px;
-  left: 2px;
-}
-
-.logo__symbol span:nth-child(3) {
-  bottom: 2px;
-  right: 2px;
-}
-
-.logo__symbol::before,
-.logo__symbol::after {
-  content: "";
-
-  position: absolute;
-
-  height: 2px;
-
-  background: var(--color-accent);
-
-  transform-origin: left center;
-}
-
-.logo__symbol::before {
-  width: 13px;
-
-  top: 11px;
-  left: 7px;
-
-  transform: rotate(125deg);
-}
-
-.logo__symbol::after {
-  width: 13px;
-
-  top: 12px;
-  left: 13px;
-
-  transform: rotate(55deg);
+  width: auto;
+  height: 76px;
 }
 
 .nav {
@@ -1752,6 +1685,10 @@ img {
   margin-bottom: 18px;
 }
 
+.logo--footer img {
+  height: 132px;
+}
+
 .footer__brand > p {
   max-width: 300px;
 
@@ -1934,7 +1871,11 @@ img {
 
     gap: 12px 16px;
 
-    padding: 18px 0 14px;
+    padding: 14px 0 12px;
+  }
+
+  .logo img {
+    height: 60px;
   }
 
   .nav {
